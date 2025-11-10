@@ -13,8 +13,8 @@ AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 # Use access keys to authenticate to AWS
 brt = boto3.client(
     service_name="bedrock-runtime",
-    aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+    aws_access_key_id=AWS_ACCESS_KEY_ID, # only needed if running locally
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY, # only needed if running locally
     region_name="eu-central-1",
 )
 
