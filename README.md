@@ -1,4 +1,4 @@
-# makeathon_exmaples
+# makeathon
 AWS examples for a makeathon
 
 # S3 Access
