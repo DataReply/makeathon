@@ -1,6 +1,15 @@
 # makeathon
 AWS examples for a makeathon
 
+# Quickstart Guide
+🚀 Check out this document [Quick Start Guide](./Makeathon%20AWS%20Quickstart%20Guide.pdf)
+1. Login
+2. Roles & Permissions
+3. Access Keys
+4. Sagemaker AI Platform & Jupyter Notebooks
+5. S3 Storage
+
+
 # S3 Access
 Checkout the [S3_Example.ipynb](./S3_Example.ipynb) notebook. ->
 You can run this on [AWS Sagemaker Notebooks](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html)
