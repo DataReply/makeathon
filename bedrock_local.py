@@ -19,7 +19,7 @@ brt = boto3.client(
 )
 
 # Set the model ID, e.g., Anthropic Clause 3.5 Sonnet.
-model_id = "anthropic.claude-3-5-sonnet-20240620-v1:0"
+model_id = "eu.meta.llama3-2-1b-instruct-v1:0"
 
 # Start a conversation with the user message.
 user_message = "Describe the purpose of a 'hello world' program in one line."
