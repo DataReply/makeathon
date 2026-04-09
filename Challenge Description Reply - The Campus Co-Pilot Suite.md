@@ -48,10 +48,10 @@ Because you are the true experts of the student experience, you know better than
 - **Development tools:** AWS SageMaker Notebooks, and AWS Bedrock for development tools supporting it (like OpenCode see [OpenCode via Bedrock](https://opencode.ai/docs/providers/#amazon-bedrock))
 -  **Cloud services:** One AWS account per team pre-configured. Check out the resources under Kickstar & Examples to learn more about AWS services!
 -  **AI Models via AWS Amazon Bedrock:**
-  - **Anthropic Claude Sonnet/Opus 4.6** — text generation, reasoning, coding
-  - **Amazon Nova Pro** — text generation, multimodal
-  - **Amazon Titan Text Embeddings v2** — convert text to vectors for search/RAG
-  - **Llama 4, DeepSeek R1 and many more.** Full list of available models: [Bedrock Inference Profiles](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html)
+     - **Anthropic Claude Sonnet/Opus 4.6** — text generation, reasoning, coding
+     - **Amazon Nova Pro** — text generation, multimodal
+     - **Amazon Titan Text Embeddings v2** — convert text to vectors for search/RAG
+     - **Llama 4, DeepSeek R1 and many more.** Full list of available models: [Bedrock Inference Profiles](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html)
 - **Tum systems**: We compiled a quick list of TUM web pages and services which your agent could interact with [here](https://github.com/DataReply/makeathon/blob/main/tum_systems.md)
   
 ---
