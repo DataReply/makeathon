@@ -54,7 +54,7 @@ Because you are the true experts of the student experience, you know better than
   - **Amazon Nova Pro** — text generation, multimodal
   - **Amazon Titan Text Embeddings v2** — convert text to vectors for search/RAG
   - **Llama 4, DeepSeek R1 and many more.** Full list of available models: [Bedrock Inference Profiles](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html)
-- ⚙️ [Any additional resources]
+- **Tum systems**: We compiled a quick list of TUM web pages and services which your agent could interact with [here](https://github.com/DataReply/makeathon/blob/main/tum_systems.md)
   
 ---
 
@@ -62,8 +62,9 @@ Because you are the true experts of the student experience, you know better than
 
 To help you hit the ground running, we’ve prepared some starter resources and examples. Check them out to accelerate your development:
 
-- 📖 **Kickstart Slides:** [https://github.com/DataReply/makeathon/blob/main/Makeathon%20AWS%20Quickstart%20Guide.pdf](https://github.com/DataReply/makeathon/blob/main/Makeathon%20AWS%20Quickstart%20Guide.pdf)
+- 📖 **AWS Kickstart Slides:** [https://github.com/DataReply/makeathon/blob/main/Makeathon%20AWS%20Quickstart%20Guide.pdf](https://github.com/DataReply/makeathon/blob/main/Makeathon%20AWS%20Quickstart%20Guide.pdf): These slides should help you to familiarize yoursselves with the different AWS services you might use
 - 💻 **Example Repo:** [https://github.com/DataReply/makeathon](https://github.com/DataReply/makeathon)
+   - We prepared some python (.py and notebook) and typescript example files to demonstrate how to use some AWS services including s3 (general storage solution) and Bedrock (LLMs hosted by AWS) in code. Furthermore there is an example notebook showing you how to simply set up a vecor database from an html input file using s3vectors and how to create a Langgraph agent with access to this database as a tool [here](https://github.com/DataReply/makeathon/blob/main/python/notebooks/RAG_agent_example.ipynb).
 
 ---
 
