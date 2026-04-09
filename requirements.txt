@@ -5,3 +5,5 @@ langchain-aws
 langchain-text-splitters
 lxml
 beautifulsoup4
+langchain
+langgraph
