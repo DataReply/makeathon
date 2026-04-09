@@ -62,7 +62,8 @@ To help you with getting started, we’ve prepared some starter resources and ex
 
 - **AWS Kickstart Slides:** [https://github.com/DataReply/makeathon/blob/main/Makeathon%20AWS%20Quickstart%20Guide.pdf](https://github.com/DataReply/makeathon/blob/main/Makeathon%20AWS%20Quickstart%20Guide.pdf): These slides should help you to familiarize yoursselves with the different AWS services you might use
 - **Example Repo:** [https://github.com/DataReply/makeathon](https://github.com/DataReply/makeathon)
-   - In this repository we prepared some python (.py and notebook) and typescript example files to demonstrate how to use some AWS services including s3 (general storage solution) and Bedrock (LLMs hosted by AWS) in code. Furthermore there is an example notebook showing you how to simply set up a vecor database from an html input file using s3vectors and how to create a Langgraph agent with access to this database as a tool [here](https://github.com/DataReply/makeathon/blob/main/python/notebooks/RAG_agent_example.ipynb).
+   - We prepared some python (.py and notebook) examples files to demonstrate how to use some AWS services including s3 (general storage solution) and Bedrock (LLMs hosted by AWS) in code. Furthermore there is an example notebook showing you how to simply set up a vecor database from an html input file using s3vectors and how to create a Langgraph agent with access to this database as a tool [here](https://github.com/DataReply/makeathon/blob/main/python/notebooks/RAG_agent_example.ipynb).
+   - Alternatively, if you are a Nodejs/Typescript fan, there's some examples in typescript as well [here](https://github.com/DataReply/makeathon/blob/main/typescript/README.md) where you can see how to access S3, invoke Bedrock models, build a RAG with S3 Vectors and create a Langchain pipeline with Bedrock.
 
 ---
 
