@@ -47,24 +47,23 @@ Because you are the true experts of the student experience, you know better than
 
 ### **🧰 What You’ll Have Access To**
 
-List everything the partner provides:
-
-- 📦 [Datasets / Data access]
-- 🔧 [Tools / Platforms]
-- ☁️ [Cloud services]
-- 🧠 [Models / APIs]
+- 🔧 **Development tools:** AWS SageMaker Notebooks and AWS Bedrock for development tools supporting it (like OpenCode see [OpenCode via Bedrock](https://opencode.ai/docs/providers/#amazon-bedrock))
+- ☁️ **Cloud services:** AWS account per team with pre-configured.
+- 🧠 **AI Models via AWS Amazon Bedrock:**
+  - **Anthropic Claude Sonnet/Opus 4.6** — text generation, reasoning, coding
+  - **Amazon Nova Pro** — text generation, multimodal
+  - **Amazon Titan Text Embeddings v2** — convert text to vectors for search/RAG
+  - **Llama 4, DeepSeek R1 and many more.** Full list of available models: [Bedrock Inference Profiles](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html)
 - ⚙️ [Any additional resources]
-
+  
 ---
 
 ### **🚀 Kickstart & Examples**
 
 To help you hit the ground running, we’ve prepared some starter resources and examples. Check them out to accelerate your development:
 
-- 📖 **Kickstart Slides:** [Placeholder for pitch deck / onboarding slides]
-- 💻 **Example Repo:** [Placeholder for GitLab repository link]
-
-*(Colleagues to insert links here)*
+- 📖 **Kickstart Slides:** [https://github.com/DataReply/makeathon/blob/main/Makeathon%20AWS%20Quickstart%20Guide.pdf](https://github.com/DataReply/makeathon/blob/main/Makeathon%20AWS%20Quickstart%20Guide.pdf)
+- 💻 **Example Repo:** [https://github.com/DataReply/makeathon](https://github.com/DataReply/makeathon)
 
 ---
 
