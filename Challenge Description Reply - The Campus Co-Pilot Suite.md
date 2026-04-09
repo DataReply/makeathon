@@ -48,7 +48,7 @@ Because you are the true experts of the student experience, you know better than
 ### **🧰 What You’ll Have Access To**
 
 - 🔧 **Development tools:** AWS SageMaker Notebooks and AWS Bedrock for development tools supporting it (like OpenCode see [OpenCode via Bedrock](https://opencode.ai/docs/providers/#amazon-bedrock))
-- ☁️ **Cloud services:** AWS account per team with pre-configured.
+- ☁️ **Cloud services:** AWS account per team pre-configured.
 - 🧠 **AI Models via AWS Amazon Bedrock:**
   - **Anthropic Claude Sonnet/Opus 4.6** — text generation, reasoning, coding
   - **Amazon Nova Pro** — text generation, multimodal
