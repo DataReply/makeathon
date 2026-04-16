@@ -29,22 +29,16 @@ Quick overview of what's inside:
 
 ---
 
-# 🐍 Python Examples (SageMaker Notebooks)
-
-## S3 Access
-Checkout the [S3_Example.ipynb](./S3_Example.ipynb) notebook. →
-You can run this on [AWS Sagemaker Notebooks](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html)
-
-## Bedrock Access
-Checkout the [Bedrock_Example.ipynb](./Bedrock_Example.ipynb) notebook. →
-You can run this on [AWS Sagemaker Notebooks](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html)
+# 🐍 Python Examples 
 
 ---
 
-# Local Examples
+# Examples
 Make sure you never store access keys in a public location!
+In the python/py folder you can find example files for s3 and Bedrock access as well.
 
 ## Prerequisites
+If you run the example files locally you should follow these steps!
 ### Create a virtual python environment
 1. Create a virtual python environment `python3 -m venv .venv`
 2. Activate the virtual environment `source .venv/bin/activate`
@@ -59,40 +53,19 @@ Source: https://docs.python.org/3/library/venv.html
 
 **WARNING** Make sure you NEVER add these keys to a public repository!
 
-## Bedrock Local
+## Notebook examples
+With minor adjustments you can run all the examples on [AWS Sagemaker Notebooks](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html). This makes the setup easier in many cases, as it integrates very well with the AWS environment and other services.
+### S3 Access
+Checkout the [S3_Example.ipynb](./S3_Example.ipynb) notebook. →
 
-> **ATTENTION!** When selecting a model in Bedrock it's now required their **inference profile IDs** instead of raw model IDs.
->
-> Example:
->   - Before: `amazon.nova-pro-v1:0`
->   - Now: `eu.amazon.nova-pro-v1:0`
->
-> Find all available inference profile IDs here: [Supported Regions and models for inference profiles](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html) (always choose EU when available, otherwise global).
-> When generating code with AI you might need to change this manually, as it's a recent change in AWS ;)
+### Bedrock Access
+Checkout the [Bedrock_Example.ipynb](./Bedrock_Example.ipynb) notebook. →
 
-1. Make sure the environment is activated `source .venv/bin/activate`
-2. Execute `python bedrock_local.py`
+### A simple langgraph agent with RAG
+Check out the [RAG_agent_example](https://github.com/DataReply/makeathon/blob/main/python/notebooks/RAG_agent_example.ipynb) repository to find a simple langgraph agent using s3vectors to run similarity queries.
 
-The output should look like this:
-```
-(.venv) user@host$ python bedrock_local.py
-
->>> Model Response: A 'hello world' program demonstrates the basic syntax of a programming language by outputting a simple greeting.
-```
-
-## S3 Local
-1. Make sure the environment is activated `source .venv/bin/activate`
-2. Change the group name in the file `s3_local.py` to a valid group name
-3. Execute `python s3_local.py`
-
-The output should look like this:
-```
-(.venv) user@host$ python s3_local.py
-Downloaded 's3://makeathontest/data/dummy_data.csv' and stored file in 'dummy_data.csv'
-
-(.venv) user@host$ ls
-dummy_data.csv
-```
+## .py files
+There are example files to access bedrock and s3 from .py files as well under ```/python/py/```
 
 ---
 
