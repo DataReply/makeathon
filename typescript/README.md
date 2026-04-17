@@ -52,15 +52,6 @@ AWS Secret Access Key [None]: xxxxxx
 Default region name [None]: eu-central-1
 Default output format [None]: None
 ```
-> If you're using **SSO temporary credentials** (which include a session token), use this instead:
-> ```bash
-> aws configure set aws_access_key_id ASIA...
-> aws configure set aws_secret_access_key ...
-> aws configure set aws_session_token ...
-> aws configure set region eu-central-1
-> ```
-
-> ⚠️ SSO credentials expire after ~1 hour. You'll need to re-run these commands when they expire.
 
 ---
 
@@ -72,7 +63,6 @@ These only last for the current terminal session. Useful if you don't want to pe
 ```bash
 export AWS_ACCESS_KEY_ID="ASIA..."
 export AWS_SECRET_ACCESS_KEY="..."
-export AWS_SESSION_TOKEN="..."
 export AWS_DEFAULT_REGION="eu-central-1"
 ```
 
@@ -80,7 +70,6 @@ export AWS_DEFAULT_REGION="eu-central-1"
 ```powershell
 $env:AWS_ACCESS_KEY_ID="ASIA..."
 $env:AWS_SECRET_ACCESS_KEY="..."
-$env:AWS_SESSION_TOKEN="..."
 $env:AWS_DEFAULT_REGION="eu-central-1"
 ```
 
@@ -175,7 +164,6 @@ cp .env.example .env
 
 AWS_ACCESS_KEY_ID=            # starts with ASIA... (from SSO) or AKIA... (long-lived)
 AWS_SECRET_ACCESS_KEY=        # the secret that pairs with your key ID
-AWS_SESSION_TOKEN=            # only needed for SSO/temporary credentials (leave empty for long-lived keys)
 AWS_DEFAULT_REGION=eu-central-1
 
 # Required for bedrock examples:
@@ -234,7 +222,7 @@ Upload and download objects from S3.
 > ```dotenv
 > S3_BUCKET=hackathon-team-data (or whatever name you prefer)
 > ```
-> To create a bucket via CLI:
+> To create a bucket via AWS CLI:
 > ```bash
 > aws s3 mb s3://hackathon-team-data --region eu-central-1
 > ```
@@ -523,44 +511,9 @@ curl -X POST http://localhost:3000/ask \
 
 1. **The SDK is just a library.** Import it, create a client, call `.send()`. Same pattern as calling any external API.
 2. **Create clients once** at the top of your app, not inside each request handler. The SDK manages connection pooling for you.
-3. **Credentials come from environment variables.** The SDK automatically reads `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` — you don't pass them to the client constructor.
+3. **Credentials come from environment variables.** The SDK automatically reads `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` — you don't pass them to the client constructor.
 4. **Model IDs are now inference profile IDs.** Use `eu.anthropic.claude-sonnet-4-6` (not the old `anthropic.claude-3-5-sonnet-...` format). The `eu.` prefix ensures data stays in EU regions.
 5. **Embeddings + vector search replaces your typical database query.** Instead of `SELECT * FROM docs WHERE ...`, you embed the query text and ask S3 Vectors for the nearest vectors.
-
----
-
-## Running on AWS Cloud9
-
-If you prefer a cloud-based IDE instead of local development:
-
-1. Open the **Cloud9** console in your team's AWS account
-2. Create a new environment (choose `t3.small` — enough for Node.js)
-3. In the Cloud9 terminal:
-```bash
-git clone <this-repo-url>
-cd makeathon/typescript
-npm install
-npm run bedrock
-```
-
-> Cloud9 automatically provides AWS credentials via the instance's IAM role — no `.env` needed.
-
----
-
-## Project Structure
-```
-typescript/
-├── README.md           # ← you are here
-├── package.json        # dependencies & scripts
-├── tsconfig.json       # TypeScript config
-├── .env.example        # credential + config template
-├── .gitignore          # keeps .env and node_modules out of git
-└── src/
-    ├── config.ts       # shared config (region, model IDs, bucket names)
-    ├── bedrock.ts      # Bedrock invocation example
-    ├── s3.ts           # S3 storage example
-    └── rag.ts          # RAG with S3 Vectors example
-```
 
 ---
 

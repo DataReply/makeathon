@@ -101,6 +101,6 @@ Once connected, your assistant can search LangChain, LangGraph, and LangSmith do
 
 ## Other useful tips
 
-- **Always use `eu.` inference profile IDs** for Bedrock models to keep data in EU regions
+- **Always use `eu.` inference profile IDs** for Bedrock models to keep data in EU regions. Here's anyway all models you can choose from and their inference profile IDs [Bedrock Inference Profiles](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html)
+- **Don't commit your keys and don't share them publicly**
 - **S3 bucket names must be lowercase** — only letters, numbers, and hyphens, globally unique
-- **SSO credentials expire after ~1 hour** — re-copy from the portal when you get `ExpiredTokenException`
